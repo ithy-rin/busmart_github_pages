@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Busmart - バス時刻表・路線検索アプリ">
+    <title>Busmart - バス時刻表・路線検索アプリ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .screenshots {
+            padding: 80px 20px;
+            background-color: white;
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        .screenshot-gallery {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .screenshot-gallery img {
+            height: 600px;
+            width: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            scroll-snap-align: center;
+            flex-shrink: 0;
+        }
+
+        .features {
+            padding: 80px 20px;
+            background-color: #f5f5f7;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .screenshots h2,
+            .features h2 {
+                font-size: 2em;
+            }
+
+            .screenshot-gallery img {
+                height: 500px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Busmart</h1>
+            <p>バス時刻表・路線検索を簡単に</p>
+            <p>いつでもどこでも、バスの時刻表と路線情報を素早く検索できます</p>
+            <div class="download-buttons">
+                <a href="#" class="download-btn">App Storeでダウンロード</a>
+                <a href="#" class="download-btn">Google Playでダウンロード</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="screenshots">
+        <div class="container">
+            <h2>スクリーンショット</h2>
+            <div class="screenshot-gallery">
+                <img src="images/image 1.png" alt="Busmartスクリーンショット1">
+                <img src="images/image 2.png" alt="Busmartスクリーンショット2">
+                <img src="images/image 3.png" alt="Busmartスクリーンショット3">
+                <img src="images/image 4.png" alt="Busmartスクリーンショット4">
+                <img src="images/image 5.png" alt="Busmartスクリーンショット5">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>主な機能</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚌</div>
+                    <h3>バス時刻表検索</h3>
+                    <p>お気に入りのバス停の時刻表をすぐに確認。リアルタイムの運行情報も表示します。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>路線検索</h3>
+                    <p>目的地までの最適なバスルートを検索。複数の経路を比較できます。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📍</div>
+                    <h3>周辺バス停検索</h3>
+                    <p>現在地周辺のバス停を地図上で表示。最寄りのバス停がすぐに見つかります。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⭐</div>
+                    <h3>お気に入り登録</h3>
+                    <p>よく使うバス停やルートをお気に入りに登録して、素早くアクセスできます。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔔</div>
+                    <h3>通知機能</h3>
+                    <p>バスの発車時刻や遅延情報をプッシュ通知でお知らせします。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <h3>シンプルなUI</h3>
+                    <p>直感的で使いやすいインターフェース。誰でも簡単に操作できます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Busmart. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">プライバシーポリシー</a>
+                <a href="tos.html">利用規約</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
