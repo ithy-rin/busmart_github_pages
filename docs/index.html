@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Busmart - 「遅延傾向」がわかるバス時刻表アプリ">
     <title>Busmart - 「遅延傾向」がわかるバス時刻表アプリ</title>
+    <link rel="icon" type="image/png" href="images/iOS_busmartIcon.png">
     <style>
         * {
             margin: 0;
@@ -31,6 +32,15 @@
             color: white;
             padding: 80px 20px;
             text-align: center;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
@@ -101,9 +111,40 @@
             flex-shrink: 0;
         }
 
-        .features {
+        .about {
             padding: 80px 20px;
             background-color: #f5f5f7;
+        }
+
+        .about h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .features {
+            padding: 80px 20px;
+            background-color: white;
         }
 
         .features h2 {
@@ -173,6 +214,11 @@
         }
 
         @media (max-width: 768px) {
+            .app-icon {
+                width: 100px;
+                height: 100px;
+            }
+
             header h1 {
                 font-size: 2em;
             }
@@ -182,12 +228,17 @@
             }
 
             .screenshots h2,
+            .about h2,
             .features h2 {
                 font-size: 2em;
             }
 
             .screenshot-gallery img {
                 height: 500px;
+            }
+
+            .about-content {
+                padding: 30px 20px;
             }
 
             .download-buttons {
@@ -201,25 +252,37 @@
 <body>
     <header>
         <div class="container">
+            <img src="images/iOS_busmartIcon.png" alt="Busmartアイコン" class="app-icon">
             <h1>Busmart</h1>
             <p>「遅延傾向」がわかるバス時刻表アプリ</p>
             <p>「Busmart」はバス停の検索やバスの時刻表を確認できるアプリです。一部路線では過去の運行実績から算出した遅延傾向を見ることができます。</p>
-            <div class="download-buttons">
+            <!-- <div class="download-buttons">
                 <a href="#" class="download-btn">App Storeでダウンロード</a>
                 <a href="#" class="download-btn">Google Playでダウンロード</a>
-            </div>
+            </div> -->
         </div>
     </header>
 
     <section class="screenshots">
         <div class="container">
-            <h2>スクリーンショット</h2>
+            <h2>アプリ画面</h2>
             <div class="screenshot-gallery">
-                <img src="images/image 1.png" alt="Busmartスクリーンショット1">
-                <img src="images/image 2.png" alt="Busmartスクリーンショット2">
-                <img src="images/image 3.png" alt="Busmartスクリーンショット3">
-                <img src="images/image 4.png" alt="Busmartスクリーンショット4">
-                <img src="images/image 5.png" alt="Busmartスクリーンショット5">
+                <img src="images/image 1.png" alt="Busmartアプリ画面1">
+                <img src="images/image 2.png" alt="Busmartアプリ画面2">
+                <img src="images/image 3.png" alt="Busmartアプリ画面3">
+                <img src="images/image 4.png" alt="Busmartアプリ画面4">
+                <img src="images/image 5.png" alt="Busmartアプリ画面5">
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>アプリについて</h2>
+            <div class="about-content">
+                <p>「Busmart」はバス停の検索やバスの時刻表を確認できるアプリです。一部路線では過去の運行実績から算出した遅延傾向を見ることができます。</p>
+                <p>バス停名での検索はもちろん、地図上から周辺のバス停を探すことも可能です。のりばごとに時刻表を表示し、路線や行き先で絞り込むこともできます。</p>
+                <p>対応路線では、時刻表に平均および最大の遅延時間が表示されるため、余裕を持った移動計画を立てることができます。</p>
             </div>
         </div>
     </section>
